@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="">
+  <head>
+    <meta charset="utf-8">
+    <title>TODOS</title>
+      <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class ="container" >
+    <div ng-controller="">
+      <center><form>
+        <div class="col-sm-10">
+        <center><div class="form-group">
+          <h1><label for="Todos">TODOS</label></h1>
+          <input type="text" class="form-control" id = "Todos" ng-model="" placeholder="What Is To Be Done "><br>
+        </div>
+
+
+        <button ng-click="save()" type="button" class="btn btn-success" name="button">Add</button></center>
+
+      </form></center>
+    </div>
+  </div></div>
+
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
