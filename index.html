@@ -27,13 +27,14 @@
             <th>Status</th>
             <tbody>
 
-            <tr ng-repeat="mess in Message">
-              <td>  <div class="checkbox" >
-                <label><input type="checkbox" ng-model="checkc" ></label></div>
+            <tr ng-repeat="mess in Message" >
+              <td> <div >
+                <div class="checkbox" >
+                <label ></label><input type="checkbox" ng-model="ch" ng-true-value="'Complete'" ng-false-value="''">
+                </div>
               </td>
-
               <td>{{ mess.mes }}</td>
-              <td>{{ checkc }}</td>
+              <td><div>{{ ch }}<div></td>
             </tr>
           </tbody>
           </thead>
@@ -45,7 +46,6 @@
 
 
 </div>
-
 
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
