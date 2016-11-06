@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="Todos">
   <head>
     <meta charset="utf-8">
     <title>TODOS</title>
@@ -7,12 +7,12 @@
   </head>
   <body>
     <div class ="container" >
-    <div ng-controller="">
+    <div ng-controller="AddMessageController">
       <center><form>
         <div class="col-sm-10">
         <center><div class="form-group">
           <h1><label for="Todos">TODOS</label></h1>
-          <input type="text" class="form-control" id = "Todos" ng-model="" placeholder="What Is To Be Done "><br>
+          <input type="text" class="form-control" id = "Todos" ng-model="mes" placeholder="What Is To Be Done "><br>
         </div>
 
 
@@ -20,9 +20,30 @@
 
       </form></center>
     </div>
-  </div></div>
+  </div>
 
+        <div ng-controller="ListMessageController">
+          <table class="table table-hover">
+          <thead>
 
+            <th>Checkbox</th>
+            <th>Message</th>
+            <th>Status</th>
+            <tbody>
+
+            <tr ng-repeat="mess in Message">
+              <td><div class="checkbox">
+      <label>
+        <input type="checkbox">
+      </label></div></td>
+              <td>{{ mess.mes }}</td>
+<td></td>
+            </tr>
+          </tbody>
+          </thead>
+          </table>
+          </div>
+</div>
 
 
 
@@ -33,4 +54,3 @@
 
   </body>
 </html>
-//ลอง
