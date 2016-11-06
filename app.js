@@ -2,8 +2,12 @@ angular.module( 'Todos',[])
   .service('Services',function(){
     var self = this
 
+<<<<<<< HEAD
     self.Message = [ { mes: ''}]
     self.check = [{ ch: ''}]
+=======
+    self.Message = [ { mes: 'weef'}]
+>>>>>>> 67969ce2eb223e5099e5159ec36517ee838f9b77
 
     self.list = function() {return self.Message}
 
