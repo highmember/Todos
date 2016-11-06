@@ -2,7 +2,8 @@ angular.module( 'Todos',[])
   .service('Services',function(){
     var self = this
 
-    self.Message = [ { mes: 'ไก่อ๊อฟ'}]
+    self.Message = [ { mes: ''}]
+    self.check = [{ ch: ''}]
 
     self.list = function() {return self.Message}
 
@@ -11,6 +12,11 @@ angular.module( 'Todos',[])
 
   .controller('ListMessageController',function ($scope, Services){
     $scope.Message = Services.list()
+    $scope.checkc = function(){
+      var c = {ch: $scope.ch}
+      Services.add(c)
+    }
+
 })
 
   .controller('AddMessageController', function($scope, Services){

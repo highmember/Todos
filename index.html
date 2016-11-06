@@ -18,31 +18,31 @@
 
         <button ng-click="save()" type="button" class="btn btn-success" name="button">Add</button></center>
 
-      </form></center>
-    </div>
-  </div>
-
         <div ng-controller="ListMessageController">
           <table class="table table-hover">
           <thead>
-
             <th>Checkbox</th>
             <th>Message</th>
             <th>Status</th>
             <tbody>
 
             <tr ng-repeat="mess in Message">
-              <td><div class="checkbox">
-      <label>
-        <input type="checkbox">
-      </label></div></td>
+              <td>  <div class="checkbox" >
+                <label><input type="checkbox" ng-model="checkc" ></label></div>
+              </td>
+
               <td>{{ mess.mes }}</td>
-<td></td>
+              <td>{{ checkc }}</td>
             </tr>
           </tbody>
           </thead>
           </table>
           </div>
+      </form></center>
+    </div>
+  </div>
+
+
 </div>
 
 
