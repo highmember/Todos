@@ -2,7 +2,7 @@ angular.module( 'Todos',[])
   .service('Services',function(){
     var self = this
 
-    self.Message = [ { mes: 'ไก่อ๊อฟ'}]
+    self.Message = [ { mes: 'weef'}]
 
     self.list = function() {return self.Message}
 
