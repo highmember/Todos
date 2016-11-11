@@ -2,27 +2,29 @@ angular.module( 'Todos',[])
   .service('Services',function(){
     var self = this
 
-    self.Message = []
+    self.Todo = []
 
-    self.list = function() {return self.Message}
-    self.add = function(Message) {self.Message.push(Message)}
+    self.list = function() {return self.Todo}
+    self.add = function(Todo) {self.Todo.push(Todo)}
 })
 
   .controller('ListMessageController',function ($scope, Services){
-    $scope.Message = Services.list()
+    $scope.Todo = Services.list()
 })
 
   .controller('AddMessageController', function($scope, Services){
-    $scope.mes = ''
+    $scope.title = ''
     $scope.save = function(){
-      if($scope.mes !== '')
+      if($scope.title !== '')
       {
-        var m = {mes: $scope.mes}
-        Services.add(m)
+        var t = {title: $scope.title}
+        var c = {done: $scope.done}
+        Services.add(t)
+        Services.add(c)
         resetForm()
       }
 
     }
 
-    function resetForm(){$scope.mes =''}
+    function resetForm(){$scope.title =''}
 })

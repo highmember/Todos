@@ -13,7 +13,7 @@
         <div>
         <center><div class="form-group">
           <h1><label for="Todos">TODOS</label></h1>
-          <input type="text" class="form-control input-lg" id = "Todos" ng-model="mes" placeholder="  What Is To Be Done ?"><br>
+          <input type="text" class="form-control input-lg" id = "Todos" ng-model="title" placeholder="What Is To Be Done ?"><br>
         </div>
 
         <button ng-click="save()" type="button" class="btn btn-danger" name="button">Add</button></center>
@@ -29,14 +29,14 @@
             <th width="40%">Status</th>
 
             <tbody>
-            <tr ng-repeat="mess in Message" >
+            <tr ng-repeat="mess in Todo" >
               <td width="20%">
                 <div class="checkbox">
-                <label ></label><input type="checkbox" ng-model="ch" ng-true-value="'Complete'" ng-false-value="''">
+                <label ></label><input type="checkbox" ng-model="done" ng-true-value="'Complete'" ng-false-value="''">
                 </div>
               </td>
-              <td>{{ mess.mes }}</td>
-              <td width="40%">{{ ch }}</td>
+              <td>{{ mess.title }}</td>
+              <td width="40%">{{ done }}</td>
             </tr>
           </tbody>
           </thead>
