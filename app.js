@@ -13,10 +13,15 @@ angular.module( 'Todos',[])
 })
 
   .controller('AddMessageController', function($scope, Services){
+    $scope.mes = ''
     $scope.save = function(){
-      var m = {mes: $scope.mes}
+      if($scope.mes !== '')
+      {
+        var m = {mes: $scope.mes}
         Services.add(m)
-      resetForm()
+        resetForm()
+      }
+
     }
 
     function resetForm(){$scope.mes =''}
