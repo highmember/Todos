@@ -2,7 +2,7 @@ angular.module( 'Todos',[])
   .service('Services',function(){
     var self = this
 
-    self.Message = [ { mes: ''}]
+    self.Message = []
 
     self.list = function() {return self.Message}
     self.add = function(Message) {self.Message.push(Message)}
@@ -15,7 +15,7 @@ angular.module( 'Todos',[])
   .controller('AddMessageController', function($scope, Services){
     $scope.save = function(){
       var m = {mes: $scope.mes}
-      Services.add(m)
+        Services.add(m)
       resetForm()
     }
 

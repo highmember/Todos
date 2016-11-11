@@ -13,11 +13,11 @@
         <center><div class="form-group">
           <h1><label for="Todos">TODOS</label></h1>
           <input type="text" class="form-control" id = "Todos" ng-model="mes" placeholder="  What Is To Be Done ?"><br>
-        </div>
-
+        </div></div>
 
         <button ng-click="save()" type="button" class="btn btn-danger" name="button">Add</button></center>
-
+      </form>
+    </div>
 
         <div ng-controller="ListMessageController">
           <table class="table table-hover">
@@ -25,27 +25,24 @@
             <th>Checkbox</th>
             <th>Message</th>
             <th>Status</th>
-            <tbody>
 
+            <tbody>
             <tr ng-repeat="mess in Message" >
-              <td> <div >
+              <td>
                 <div class="checkbox" >
                 <label ></label><input type="checkbox" ng-model="ch" ng-true-value="'Complete'" ng-false-value="''">
                 </div>
               </td>
               <td>{{ mess.mes }}</td>
-              <td><div>{{ ch }}<div></td>
+              <td>{{ ch }}</td>
             </tr>
           </tbody>
           </thead>
           </table>
-          </div>
-      </form></center>
+      </center>
     </div>
-  </div>
-
-
 </div>
+
 
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
